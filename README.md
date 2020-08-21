@@ -1,0 +1,8 @@
+- [Главная](https://studenttsu.github.io/elixir/)
+- [Каталог](https://studenttsu.github.io/elixir/catalog.html)
+- [Сертификат](https://studenttsu.github.io/elixir/certificate.html)
+- [Акции](https://studenttsu.github.io/elixir/akcii.html)
+- [Новости](https://studenttsu.github.io/elixir/news.html)
+- [Новости внутренняя](https://studenttsu.github.io/elixir/news-inner.html)
+- [Помощь](https://studenttsu.github.io/elixir/faq.html)
+- [Контакты](https://studenttsu.github.io/elixir/contacts.html)
