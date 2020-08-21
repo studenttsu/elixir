@@ -6,8 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Elixir</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
   <link rel="stylesheet" href="./css/main.css" />
 </head>
 
@@ -93,132 +91,46 @@
     </header>
 
     <main class="main">
-      <div class="container">
-        <section class="section">
-          <div class="slider">
-            <div>
-              <a href="#">
-                <img src="./img/slider-img.jpg" alt="1" />
-              </a>
-            </div>
-            <div>
-              <a href="#">
-                <img src="./img/slider-img.jpg" alt="2" />
-              </a>
-            </div>
-            <div>
-              <a href="#">
-                <img src="./img/slider-img.jpg" alt="3" />
-              </a>
-            </div>
-          </div>
-          <!-- slider -->
-        </section>
 
-        <section class="section">
-          <header class="section__header">
-            <h2 class="section__title">Разделы товаров</h2>
+      <section class="page page--gray">
+        <div class="container">
+          <header class="page__header">
+            <h1 class="page__title">FAQ</h1>
           </header>
 
-          <div class="section__inner">
-            <div>Карточки разделов</div>
-
-            <div class="section__actions">
-              <a href="#" class="btn">Все товары</a>
-            </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <header class="section__header">
-            <h2 class="section__title">Хиты</h2>
-          </header>
-
-          <div class="section__inner">
-            Карточки товаров
-          </div>
-        </section>
-
-        <section class="section">
-          <header class="section__header">
-            <h2 class="section__title">Новости</h2>
-          </header>
-
-          <div class="section__inner">
-            <div class="news-list">
-              <div class="news-card">
-                <div class="news-card__hero">
-                  <a href="#">
-                    <img src="./img/news.png" alt="" />
-                  </a>
+          <div class="page__inner">
+            <section class="faq">
+              <div class="faq__item">
+                <div class="faq__question" data-type="question">
+                  Вопрос
                 </div>
-
-                <div class="news-card__top">
-                  <a href="#" class="news-card__title">Заголовок</a>
-                  <span class="news-card__date">1/01/2020</span>
+                <div class="faq__answer" data-type="answer">
+                  Ответ
                 </div>
-
-                <p class="news-card__text">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima deserunt nemo maiores provident, esse quod nobis magnam
-                  eveniet illum error.
-                </p>
-              </div>
-              <!-- .news-card -->
-
-              <div class="news-card">
-                <div class="news-card__hero">
-                  <a href="#">
-                    <img src="./img/news.png" alt="" />
-                  </a>
-                </div>
-
-                <div class="news-card__top">
-                  <a href="#" class="news-card__title">Заголовок</a>
-                  <span class="news-card__date">1/01/2020</span>
-                </div>
-
-                <p class="news-card__text">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima deserunt nemo maiores provident, esse quod nobis magnam
-                  eveniet illum error.
-                </p>
-              </div>
-              <!-- .news-card -->
-            </div>
-            <!-- .news-list -->
-
-            <div class="section__actions">
-              <a href="#" class="btn">Все товары</a>
-            </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <header class="section__header">
-            <h2 class="section__title">О нас</h2>
-          </header>
-
-          <div class="section__inner">
-            <div class="about">
-              <div class="about__photo">
-                <img src="./img/about.jpg" alt="Elixir" />
               </div>
 
-              <div class="about__text">
-                <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur sunt distinctio, vero odit excepturi nisi laborum deleniti
-                  error. In rerum nemo ex consequatur at architecto ratione, error molestias incidunt cupiditate.
-                </p>
-
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam expedita earum eos voluptatibus ea! Mollitia cupiditate nemo
-                  veritatis, et deserunt praesentium laudantium, aliquam perferendis cum accusamus consequatur porro dignissimos!
-                  Odio quam beatae aliquid facere dolorum quidem commodi quos dolore ipsum!
-                </p>
+              <div class="faq__item">
+                <div class="faq__question" data-type="question">
+                  Вопрос
+                </div>
+                <div class="faq__answer" data-type="answer">
+                  Ответ
+                </div>
               </div>
-            </div>
+
+              <div class="faq__item">
+                <div class="faq__question" data-type="question">
+                  Вопрос
+                </div>
+                <div class="faq__answer" data-type="answer">
+                  Ответ
+                </div>
+              </div>
+            </section>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
+
     </main>
 
     <footer class="footer">
@@ -226,22 +138,28 @@
         <div class="footer__subscribe">
           <section class="subscribe">
             <header class="subscribe__header">
-              <h2 class="subscribe__title">Хотите первыми получать информацию об акциях и распродажах?</h2>
-              <p class="subscribe__subtitle">Подписывайтесь на нашу полезную рассылку</p>
+              <h2 class="subscribe__title">
+                Хотите стать участником закрытого клуба Keep Looking, чтобы быть в курсе наших новостей и акций?
+              </h2>
+              <p class="subscribe__subtitle">
+                Подписывайтесь на нашу полезную рассылку и узнавайте обо всем первыми!
+              </p>
             </header>
 
-            <form class="subscribe__form">
-              <div>
-                <input class="form-control" type="email" placeholder="Email" required />
-                <button type="submit" class="btn">Все новости</button>
-              </div>
+            <div class="subscribe__form">
+              <form>
+                <div>
+                  <input type="email" placeholder="Email" />
+                  <button type="submit" class="btn">Все новости</button>
+                </div>
 
-              <label class="checkbox">
-                <input type="checkbox" class="visually-hidden" required />
-                <span>Я принимаю условия политики обработки персональных данных
-                </span>
-              </label>
-            </form>
+                <label class="checkbox">
+                  <input type="checkbox" class="visually-hidden" />
+                  <span>Я принимаю условия политики обработки персональных данных
+                  </span>
+                </label>
+              </form>
+            </div>
           </section>
           <!-- .subscribe -->
         </div>
@@ -326,8 +244,10 @@
               </a>
             </div>
 
-            <p class="about-short__text">Elixir - это интернет-магазин кометики и парфюмерии из Омска. Уже 4 года мы помогаем вам оставаться красивой,
-              делая покупки онлайн</p>
+            <p class="about-short__text">
+              Elixir - это интернет-магазин кометики и парфюмерии из Омска. Уже 4 года мы помогаем вам оставаться красивой, делая покупки
+              онлайн
+            </p>
           </div>
         </div>
         <!-- .footer__nav -->
@@ -342,7 +262,7 @@
               <a href="#">Политика обработки персональных данных</a>
             </li>
             <li>
-              <a href="#">Разработка — СтандартМаркетинг</a>
+              <a href="#">Разработка - СтандартМаркетинг</a>
             </li>
           </ul>
 
@@ -354,10 +274,12 @@
             </ul>
 
             <div class="footer-info__text">
-              <p>На сайте используются файлы “cookie”, которые содержат в себе информацию о предыдущих посещениях веб-сайта.
-                <br> Если Вы не хотите использовать файлы “cookie” – измените настройки браузера.
+              <p>
+                Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
               </p>
-              <p>Цены, указанные на сайте, не являются публичной офертой.</p>
+              <p>
+                Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+              </p>
             </div>
           </div>
         </div>
@@ -367,8 +289,7 @@
   </div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-  <script src="./js/main.js"></script>
+  <script src="./js/faq.js"></script>
 </body>
 
 </html>
