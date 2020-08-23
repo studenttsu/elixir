@@ -15,7 +15,7 @@
       <div class="container">
         <div class="header__main">
           <a class="logo" href="/">
-            <img src="./img/logo.svg" alt="Elixir" />
+            <img src="./img/logo.png" alt="Elixir" />
           </a>
 
           <nav class="navigation">
@@ -177,28 +177,22 @@
         <div class="footer__subscribe">
           <section class="subscribe">
             <header class="subscribe__header">
-              <h2 class="subscribe__title">
-                Хотите стать участником закрытого клуба Keep Looking, чтобы быть в курсе наших новостей и акций?
-              </h2>
-              <p class="subscribe__subtitle">
-                Подписывайтесь на нашу полезную рассылку и узнавайте обо всем первыми!
-              </p>
+              <h2 class="subscribe__title">Хотите первыми получать информацию об акциях и распродажах?</h2>
+              <p class="subscribe__subtitle">Подписывайтесь на нашу полезную рассылку</p>
             </header>
 
-            <div class="subscribe__form">
-              <form>
-                <div>
-                  <input type="email" placeholder="Email" />
-                  <button type="submit" class="btn">Все новости</button>
-                </div>
+            <form class="subscribe__form">
+              <div>
+                <input class="form-control" type="email" placeholder="Email" required />
+                <button type="submit" class="btn">Все новости</button>
+              </div>
 
-                <label class="checkbox">
-                  <input type="checkbox" class="visually-hidden" />
-                  <span>Я принимаю условия политики обработки персональных данных
-                  </span>
-                </label>
-              </form>
-            </div>
+              <label class="checkbox">
+                <input type="checkbox" class="visually-hidden" checked required />
+                <span class="checkbox__control"></span>
+                <span class="checkbox__label">Я принимаю условия политики обработки персональных данных</span>
+              </label>
+            </form>
           </section>
           <!-- .subscribe -->
         </div>
@@ -276,49 +270,57 @@
           <div class="about-short">
             <div class="social about-short__social">
               <a href="#">
-                <img src="" alt="Vk" />
+                <img src="./img/icons/vk.png" alt="Vk" />
               </a>
               <a href="#">
-                <img src="" alt="Instagram" />
+                <img src="./img/icons/instagram.png" alt="Instagram" />
               </a>
             </div>
 
-            <p class="about-short__text">
-              Elixir - это интернет-магазин кометики и парфюмерии из Омска. Уже 4 года мы помогаем вам оставаться красивой, делая покупки
-              онлайн
-            </p>
+            <p class="about-short__text">Elixir - это интернет-магазин кометики и парфюмерии из Омска. Уже 4 года мы помогаем вам оставаться красивой,
+              делая покупки онлайн</p>
           </div>
         </div>
         <!-- .footer__nav -->
 
         <div class="footer__info footer-info">
-          <ul class="footer-info__links">
-            <li>2016-2020 &copy; elixir.ru</li>
-            <li>
-              <a href="#">Политика конфиденциальности</a>
-            </li>
-            <li>
-              <a href="#">Политика обработки персональных данных</a>
-            </li>
-            <li>
-              <a href="#">Разработка - СтандартМаркетинг</a>
-            </li>
-          </ul>
+          <div class="footer-info__left">
+            <div class="footer-info__copy">2016-2020 &copy; elixir.ru</div>
 
-          <div class="footer-info__bottom">
             <ul class="footer-info__legal">
-              <li>ООП/ИП</li>
-              <li>ОГРН</li>
-              <li>ИНН</li>
+              <li>
+                <a href="#">ООП/ИП</a>
+              </li>
+              <li>
+                <a href="#">ОГРН</a>
+              </li>
+              <li>
+                <a href="#">ИНН</a>
+              </li>
+            </ul>
+          </div>
+
+
+          <div class="footer-info__right">
+            <ul class="footer-info__links">
+              <li>
+                <a href="#">Политика конфиденциальности</a>
+              </li>
+              <li>
+                <a href="#">Политика обработки персональных данных</a>
+              </li>
+              <li>
+                <a href="#">Разработка — СтандартМаркетинг</a>
+              </li>
             </ul>
 
             <div class="footer-info__text">
-              <p>
-                Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+              <p>На сайте используются файлы “
+                <a href="#">cookie</a>”, которые содержат в себе информацию о предыдущих посещениях веб-сайта.
+                <br> Если Вы не хотите использовать файлы “
+                <a href="#">cookie</a>” – измените настройки браузера.
               </p>
-              <p>
-                Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
-              </p>
+              <p>Цены, указанные на сайте, не являются публичной офертой.</p>
             </div>
           </div>
         </div>

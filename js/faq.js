@@ -1,39 +1,34 @@
 (function ($) {
-    console.log(1)
+
     $.fn.faq = function () {
-        console.log(2)
         $(this).each(function (index, item) {
-            console.log(item)
             const el = $(this);
             let activeItem;
 
-            el.children().each((index, el) => {
-                const element = $(el);
-                const question = element.find('[data-type=question]');
-                const answer = element.find('[data-type=answer]');
-                const isActive = element.hasClass('active');
+            el.children().each((index, elem) => {
+                const answer = $(elem).find('[data-type=answer]');
+                answer.hide();
+            });
 
-                if (isActive) {
-                    activeItem = element;
+            el.find('[data-type=question]').on('click', function (event) {
+                const elem = event.target;
+
+                if (activeItem === elem) {
+                    $(this).parent().removeClass('active');
+                    $(this).next().slideUp('fast');
                 } else {
-                    answer.hide();
-                }
-
-                question.on('click', function () {
-                    answer.slideDown('fast');
-
-                    if (activeItem) {
-                        activeItem.find('[data-type=answer]').slideToggle('fast');
-                    }
-
-                    activeItem = element;
-                });
-
-                if (index === 0 && !activeItem) {
-                    activeItem = element;
-                    answer.show();
+                    el.children().each((index, item) => {
+                        $(item).removeClass('active');
+                        $(this).next().slideUp('fast');
+                    });
+    
+                    $(this).addClass('active');
+                    $(this).next().slideDown('fast');
+    
+                    activeItem = elem;
                 }
             });
+
         });
 
         return this;
