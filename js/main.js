@@ -1,33 +1,21 @@
 $(function () {
-    const slider$ = $('.slider');
+  const mobileMenuBtn = $('#mobile-menu-btn');
+  const mobileMenu = $('#mobile-navigation');
+  const catalogBtn = $('.mobile-navigation__catalog');
+  const catalog = $('.mobile-navigation__secondary');
+  const backBtn = $('.mobile-navigation__back');
 
-    const moveTargetToActiveItem = (nextEl, activateAnimation) => {
-        const activeEl = nextEl || document.querySelector('.slick-dots .slick-active button');
-        const target = document.querySelector('.slider-active-target');
-        const sliderEl = document.querySelector('.slider');
-        const sliderOffsetLeft = sliderEl.getBoundingClientRect().left;
+  mobileMenuBtn.click(function() {
+    $(this).toggleClass('active');
+    mobileMenu.toggleClass('open');
+    catalog.removeClass('open');
+  });
 
-        const width = activeEl.getBoundingClientRect().width;
-        const height = activeEl.getBoundingClientRect().height;
-        const left = activeEl.getBoundingClientRect().left + window.pageXOffset - sliderOffsetLeft;
-        
-        target.style.transition = activateAnimation ? 'all .35s ease-in-out' : '';
-        target.style.opacity = "1";
-        target.style.width = `${width}px`;
-        target.style.height = `${height + 1}px`;
-        target.style.left = `${left}px`;
-        target.style.transform = "none";
-        target.style.zIndex = 101;
-    };
+  catalogBtn.click(function() {
+    catalog.addClass('open');
+  });
 
-    slider$.slick({ dots: true });
-    slider$.append('<span class="slider-active-target"></span>');
-
-    slider$.on('beforeChange', (event, slick, currentSlide, nextSlide) => {
-        const activeEl = document.querySelectorAll('.slick-dots li');
-        moveTargetToActiveItem(activeEl[nextSlide].querySelector('button'), true);
-    });
-
-    window.addEventListener("resize", () => moveTargetToActiveItem());
-    moveTargetToActiveItem();
+  backBtn.click(function() {
+    catalog.removeClass('open');
+  });
 });
