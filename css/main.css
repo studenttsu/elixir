@@ -703,6 +703,10 @@ img {
   padding: 27px 15px 25px;
 }
 
+.navigation > ul > li > ul > li {
+  margin: 0;
+}
+
 .navigation > ul > li > ul > li:not(:last-child) {
   margin-right: 0;
 }
