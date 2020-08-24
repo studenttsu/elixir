@@ -998,7 +998,7 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  margin: 50px 0;
+  margin: 23px 0;
 }
 
 .catalog-hero::before {
@@ -1036,6 +1036,19 @@ img {
   list-style: none;
   font-size: 17px;
   padding: 27px 0 25px;
+  margin-top: -16px;
+}
+
+.catalog-list li {
+  margin: 16px 10px 0;
+}
+
+.catalog-list li:first-child {
+  margin-left: 0;
+}
+
+.catalog-list li:last-child {
+  margin-right: 0;
 }
 
 .catalog-list a {
@@ -1056,13 +1069,20 @@ img {
 }
 
 .catalog-page__toolbar {
-  margin-bottom: 30px;
+  margin-bottom: 45px;
+  margin-top: 20px;
+}
+
+.catalog-page__content {
+  padding-bottom: 80px;
 }
 
 .page-toolbar__title {
   font-size: 45px;
   line-height: 1;
-  /* margin: 0 0 30px; */
+  margin: 0 0 20px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .breadcrumbs {
@@ -1074,6 +1094,7 @@ img {
   padding: 0;
   text-transform: uppercase;
   font-size: 12px;
+  font-family: 'Akzidenz-Grotesk Pro Ext';
 }
 
 .breadcrumbs li:not(:last-child):after {
@@ -1083,7 +1104,7 @@ img {
 }
 
 .breadcrumbs li:last-child {
-  font-weight: bold;
+  font-family: 'Akzidenz-Grotesk Pro Med Ext';
 }
 
 .breadcrumbs a {
@@ -1252,6 +1273,20 @@ img {
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
+  .catalog-hero {
+    height: 360px;
+  }
+
+  .catalog-list {
+    display: block;
+  }
+
+  .catalog-list li {
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 15px;
+  }
+
   .subscribe__form .btn {
     max-width: initial;
     width: initial;
@@ -1332,10 +1367,18 @@ img {
   .faq__answer {
     padding-left: 0;
   }
+
+  .catalog-hero {
+    margin: 0;
+  }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+  .catalog-hero {
+    height: 280px;
+  }
+
   .slider {
     margin: 0 -15px 30px;
   }
