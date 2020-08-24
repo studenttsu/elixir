@@ -1,41 +1,15 @@
-(function ($) {
+$('.faq__question').click(function(e) {
+  e.preventDefault();
 
-    $.fn.faq = function () {
-        $(this).each(function (index, item) {
-            const el = $(this);
-            let activeItem;
+  var $this = $(this);
 
-            el.children().each((index, elem) => {
-                const answer = $(elem).find('[data-type=answer]');
-                answer.hide();
-            });
-
-            el.find('[data-type=question]').on('click', function (event) {
-                const elem = event.target;
-
-                if (activeItem === elem) {
-                    $(this).parent().removeClass('active');
-                    $(this).next().slideUp('fast');
-                } else {
-                    el.children().each((index, item) => {
-                        $(item).removeClass('active');
-                        $(this).next().slideUp('fast');
-                    });
-    
-                    $(this).addClass('active');
-                    $(this).next().slideDown('fast');
-    
-                    activeItem = elem;
-                }
-            });
-
-        });
-
-        return this;
-    };
-
-}(jQuery));
-
-$(function () {
-    $('.faq').faq();
+  if ($this.parent().hasClass('active')) {
+      $this.parent().removeClass('active');
+      $this.next().slideUp(350);
+  } else {
+      $this.parent().parent().find('.faq__answer').removeClass('show');
+      $this.parent().parent().find('.faq__answer').slideUp(350);
+      $this.parent().toggleClass('active');
+      $this.next().slideToggle(350);
+  }
 });
