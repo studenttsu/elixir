@@ -540,9 +540,6 @@ img {
 /* ----------- Header ---------- */
 .header {
   border-bottom: 1px solid #333333;
-}
-
-.header .container {
   position: relative;
 }
 
@@ -691,8 +688,8 @@ img {
   left: 0;
   transition: 0.15s;
   top: 100%;
-  display: flex;
-  max-width: 1200px;
+  display: block;
+  width: 100%;
   margin: auto;
   justify-content: space-between;
   transition: all 0.3s ease;
@@ -700,15 +697,23 @@ img {
   background-color: #fff;
   z-index: 1;
   margin-top: 1px;
-  padding: 27px 15px 25px;
+  padding: 0 15px;
 }
 
 .navigation > ul > li > ul > li {
   margin: 0;
+  display: inline-block;
+}
+
+.navigation > ul > li > ul > li a {
+  margin: 0;
+  display: block;
+  padding: 20px 0;
+  font-size: 14px;
 }
 
 .navigation > ul > li > ul > li:not(:last-child) {
-  margin-right: 0;
+  margin-right: 30px;
 }
 
 .navigation > ul > li > ul a {
@@ -716,18 +721,17 @@ img {
 }
 
 .navigation > ul > li:not(:last-child) {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .navigation > ul > li > a {
   text-decoration: none;
   text-transform: uppercase;
   color: #333333;
-  font-size: 12px;
+  font-size: 10px;
   letter-spacing: 0.3px;
   transition: 0.15s;
   font-family: 'Akzidenz-Grotesk Pro Ext';
-  font-weight: 600;
   padding: 35px 0;
   display: block;
 }
