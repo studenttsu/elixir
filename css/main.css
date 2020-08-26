@@ -1506,6 +1506,35 @@ img {
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+  .catalog-page__categories {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin: 0 -15px;
+    padding: 15px;
+  }
+
+  .catalog-page__categories a {
+    background: #eff7f2;
+    padding: 3px 12px 3px;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 22px;
+    letter-spacing: 1.5px;
+    border-radius: 3px;
+  }
+
+  .catalog-list.catalog-page__categories li {
+    margin-right: 6px;
+  }
+  
+  .catalog-list.catalog-page__categories li.active a {
+    background-color: #e2e2e2;
+    border: none;
+  }
+
   .section__title,
   .page__title {
     font-size: 36px;
