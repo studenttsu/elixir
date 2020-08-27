@@ -20,7 +20,7 @@ $(function () {
         target.style.zIndex = 101;
     };
 
-    slider$.slick({ dots: true });
+    slider$.slick({ dots: true, autoplay: true, autoplaySpeed: 4500 });
     slider$.append('<span class="slider-active-target"></span>');
 
     slider$.on('beforeChange', (event, slick, currentSlide, nextSlide) => {

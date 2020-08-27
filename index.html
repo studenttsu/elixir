@@ -102,57 +102,27 @@
 
     <main class="main">
       <div class="container">
-        <ul class="catalog-list">
-          <li class="active">
-            <a href="#">Все товары</a>
-          </li>
-          <li>
-            <a href="#">Для лица</a>
-          </li>
-          <li>
-            <a href="#">Make-Up</a>
-          </li>
-          <li>
-            <a href="#">Для тела</a>
-          </li>
-          <li>
-            <a href="#">Для волос</a>
-          </li>
-          <li>
-            <a href="#">Детям</a>
-          </li>
-          <li>
-            <a href="#">Для дома</a>
-          </li>
-          <li>
-            <a href="#">Свечи</a>
-          </li>
-          <li>
-            <a href="#">Парфюм</a>
-          </li>
-          <li>
-            <a href="#">По акции</a>
-          </li>
-        </ul>
 
-        <div class="slider">
-          <div>
-            <a href="#">
-              <img src="./img/slider-img.jpg" alt="1" />
-            </a>
+        <section class="section">
+          <div class="slider">
+            <div>
+              <a href="#">
+                <img src="./img/slider-img.jpg" alt="1" />
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <img src="./img/slider-img.jpg" alt="2" />
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <img src="./img/slider-img.jpg" alt="3" />
+              </a>
+            </div>
           </div>
-          <div>
-            <a href="#">
-              <img src="./img/slider-img.jpg" alt="2" />
-            </a>
-          </div>
-          <div>
-            <a href="#">
-              <img src="./img/slider-img.jpg" alt="3" />
-            </a>
-          </div>
-        </div>
-        <!-- slider -->
+          <!-- slider -->
+        </section>
 
         <section class="section">
           <header class="section__header">
@@ -269,16 +239,19 @@
               <p class="subscribe__subtitle">Подписывайтесь на нашу полезную рассылку</p>
             </header>
 
-            <form class="subscribe__form">
+            <form id="subscribe" class="subscribe__form">
               <div>
-                <input class="form-control" type="email" placeholder="Email" required />
+                <input name="phone" class="form-control phone-input" pattern="+7\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}" type="tel" placeholder="+7 (___) ___-__-__"
+                  data-focused-always="true" inputmode="numeric" required />
                 <button type="submit" class="btn">Все новости</button>
               </div>
 
               <label class="checkbox">
-                <input type="checkbox" class="visually-hidden" checked required />
+                <input name="policy" type="checkbox" class="visually-hidden" checked required />
                 <span class="checkbox__control"></span>
-                <span class="checkbox__label">Я принимаю условия политики обработки персональных данных</span>
+                <span class="checkbox__label">Я принимаю условия
+                  <a href="#" target="_blank">политики обработки персональных данных</a>
+                </span>
               </label>
             </form>
           </section>
@@ -376,29 +349,37 @@
             <div class="footer-info__copy">2016-2020 &copy; elixir.ru</div>
 
             <ul class="footer-info__legal">
-              <li><a href="#">ООП/ИП</a></li>
-              <li><a href="#">ОГРН</a></li>
-              <li><a href="#">ИНН</a></li>
+              <li>
+                <a href="#">ООП/ИП</a>
+              </li>
+              <li>
+                <a href="#">ОГРН</a>
+              </li>
+              <li>
+                <a href="#">ИНН</a>
+              </li>
             </ul>
           </div>
 
-          
+
           <div class="footer-info__right">
             <ul class="footer-info__links">
               <li>
-                <a href="#">Политика конфиденциальности</a>
+                <a href="#" target="_blank">Политика конфиденциальности</a>
               </li>
               <li>
-                <a href="#">Политика обработки персональных данных</a>
+                <a href="#" target="_blank">Политика обработки персональных данных</a>
               </li>
               <li>
-                <a href="#">Разработка — СтандартМаркетинг</a>
+                <a href="#" target="_blank">Разработка — СтандартМаркетинг</a>
               </li>
             </ul>
 
             <div class="footer-info__text">
-              <p>На сайте используются файлы “<a href="#">cookie</a>”, которые содержат в себе информацию о предыдущих посещениях веб-сайта.
-                <br> Если Вы не хотите использовать файлы “<a href="#">cookie</a>” – измените настройки браузера.
+              <p>На сайте используются файлы “
+                <a href="#">cookie</a>”, которые содержат в себе информацию о предыдущих посещениях веб-сайта.
+                <br> Если Вы не хотите использовать файлы “
+                <a href="#">cookie</a>” – измените настройки браузера.
               </p>
               <p>Цены, указанные на сайте, не являются публичной офертой.</p>
             </div>
@@ -415,7 +396,9 @@
         <li>
           <a href="/">Главная</a>
         </li>
-        <li class="has-children mobile-navigation__catalog"><span>Каталог</span></li>
+        <li class="has-children mobile-navigation__catalog">
+          <span>Каталог</span>
+        </li>
         <li>
           <a href="#">Подарочный сертификат</a>
         </li>
@@ -432,9 +415,11 @@
           <a href="#">Контакты</a>
         </li>
       </ul>
-  
+
       <ul class="mobile-navigation__secondary">
-        <li class="mobile-navigation__back"><span>Назад в меню</span></li>
+        <li class="mobile-navigation__back">
+          <span>Назад в меню</span>
+        </li>
         <li>
           <a href="#">Все товары</a>
         </li>
@@ -471,8 +456,11 @@
   <!-- .mobile-navigation -->
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.5/jquery.inputmask.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
   <script src="./js/main.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script src="./js/slider.js"></script>
 </body>
 

@@ -465,8 +465,14 @@ img {
   border: 1px solid #779d8f;
   border-radius: 5px;
   outline: 0;
-  padding: 0 37px;
+  padding: 0 30px;
   font: 500 14px/1 'Akzidenz-Grotesk Pro Ext', sans-serif;
+}
+
+.form-control.error,
+.checkbox input.error + .checkbox__control {
+  border-color: red;
+  box-shadow: 0 0 0 1px red;
 }
 
 .btn {
@@ -535,11 +541,15 @@ img {
   display: inline-block;
   margin-left: 10px;
   font-size: 14px;
+  line-height: 22px;
 }
 
 /* ----------- Header ---------- */
 .header {
   border-bottom: 1px solid #333333;
+}
+
+.header .container {
   position: relative;
 }
 
@@ -1011,6 +1021,10 @@ img {
   width: 100%;
 }
 
+.subscribe__form a {
+  color: #333;
+}
+
 .page {
   padding: 50px 0 80px;
 }
@@ -1148,14 +1162,14 @@ img {
 
 /* ----------- Catalog ---------- */
 .catalog-hero {
-  height: 490px;
+  height: 540px;
   text-align: center;
   color: #ffffff;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  margin: 23px 0;
+  margin: 40px 0 20px;
 }
 
 .catalog-hero::before {
@@ -1371,7 +1385,8 @@ img {
   color: #999;
 }
 
-.footer-info a:hover {
+.footer-info__text a:hover,
+.footer-info__legal a:hover {
   color: #333333;
   opacity: 1;
 }
@@ -1446,10 +1461,6 @@ img {
 
   .header__actions {
     margin: 0;
-  }
-
-  .catalog-hero {
-    height: 360px;
   }
 
   .catalog-list {
@@ -1588,7 +1599,7 @@ img {
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
   .catalog-hero {
-    height: 280px;
+    height: 320px;
   }
 
   .slider {
@@ -1610,5 +1621,15 @@ img {
 
   .about-short {
     text-align: center;
+  }
+  
+  .subscribe__form .checkbox {
+    max-width: 290px;
+  }
+
+  .subscribe__form .checkbox__control,
+  .subscribe__form .checkbox__control:before {
+    width: 44px;
+    height: 44px;
   }
 }

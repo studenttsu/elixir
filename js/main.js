@@ -18,4 +18,22 @@ $(function () {
   backBtn.click(function() {
     catalog.removeClass('open');
   });
+
+  $('input.phone-input').inputmask({
+    mask: '+7 (999) 999-99-99'
+  });
+
+  $('form#subscribe').validate({
+    rules: {
+      phone: {
+        required: true,
+        phoneValidator: true
+      },
+      policy: 'required'
+    },
+    errorPlacement: function (error, element) { },
+    submitHandler: function (form) {
+      form.submit();
+    }
+  });
 });
