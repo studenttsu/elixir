@@ -765,7 +765,7 @@ img {
   overflow: auto;
   position: fixed;
   top: 0;
-  width: calc(100% - 44px);
+  width: 100%;
   z-index: 200;
   transform: translateX(-100%);
   overflow: hidden;
