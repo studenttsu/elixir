@@ -10,7 +10,7 @@ $(function () {
         const width = activeEl.getBoundingClientRect().width;
         const height = activeEl.getBoundingClientRect().height;
         const left = activeEl.getBoundingClientRect().left + window.pageXOffset - sliderOffsetLeft;
-        
+
         target.style.transition = activateAnimation ? 'all .35s ease-in-out' : '';
         target.style.opacity = "1";
         target.style.width = `${width}px`;
@@ -20,7 +20,7 @@ $(function () {
         target.style.zIndex = 101;
     };
 
-    slider$.slick({ dots: true, autoplay: true, autoplaySpeed: 4500 });
+    slider$.slick({ dots: true, arrows: false, autoplay: true, autoplaySpeed: 4500 });
     slider$.append('<span class="slider-active-target"></span>');
 
     slider$.on('beforeChange', (event, slick, currentSlide, nextSlide) => {
